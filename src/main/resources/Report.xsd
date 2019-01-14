@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="curriculum">
+        <xs:complexType>
+            <xs:sequence>
+
+                <xs:element name="reports">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="report" type="reportType" minOccurs="1" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="students">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="student" type="studentType" minOccurs="1" maxOccurs="unbounded">
+                                <xs:unique name="uniqueName">
+                                    <xs:selector xpath="student"/>
+                                    <xs:field xpath="name"/>
+                                </xs:unique>
+                                <xs:unique name="uniqueEmail">
+                                    <xs:selector xpath="student"/>
+                                    <xs:field xpath="email"/>
+                                </xs:unique>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="programs">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="program" type="programType" minOccurs="1" maxOccurs="unbounded">
+                                <xs:unique name="uniqueProgramTitle">
+                                    <xs:selector xpath="program"/>
+                                    <xs:field xpath="title"/>
+                                </xs:unique>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="courses">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="course" type="courseType" minOccurs="1" maxOccurs="unbounded">
+                                <xs:unique name="uniqueCourseTitle">
+                                    <xs:selector xpath="course"/>
+                                    <xs:field xpath="title"/>
+                                </xs:unique>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+                <xs:element name="tasks">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="task" type="taskType" minOccurs="1" maxOccurs="unbounded">
+                                <xs:unique name="uniqueTaskTitle">
+                                    <xs:selector xpath="task"/>
+                                    <xs:field xpath="title"/>
+                                </xs:unique>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+
+            </xs:sequence>
+        </xs:complexType>
+
+        <!--field "student/programID" has ref to the field "program/id"-->
+        <xs:key name="studentProgram">
+            <xs:selector xpath="./student/programID"/>
+            <xs:field xpath="."/>
+        </xs:key>
+        <xs:keyref name="student-to-program" refer="studentProgram">
+            <xs:selector xpath="./program/id"/>
+            <xs:field xpath="."/>
+        </xs:keyref>
+
+        <!--field "program/courses/courseID" has ref to the field "course/id"-->
+        <xs:key name="courseInProgram">
+            <xs:selector xpath="./program/courses/courseID"/>
+            <xs:field xpath="."/>
+        </xs:key>
+        <xs:keyref name="program-to-course" refer="courseInProgram">
+            <xs:selector xpath="./course/id"/>
+            <xs:field xpath="."/>
+        </xs:keyref>
+
+        <!--field "course/tasks/taskID" has ref to the field "task/id"-->
+        <xs:key name="taskInCourse">
+            <xs:selector xpath="./course/tasks/taskID"/>
+            <xs:field xpath="."/>
+        </xs:key>
+        <xs:keyref name="course-to-task" refer="taskInCourse">
+            <xs:selector xpath="./task/id"/>
+            <xs:field xpath="."/>
+        </xs:keyref>
+
+
+        <!--refs from report to other types-->
+        <xs:key name="studentInReport">
+            <xs:selector xpath="./report/studentID"/>
+            <xs:field xpath="."/>
+        </xs:key>
+        <xs:keyref name="report-to-student" refer="studentInReport">
+            <xs:selector xpath="./student/id"/>
+            <xs:field xpath="."/>
+        </xs:keyref>
+
+        <xs:key name="programInReport">
+            <xs:selector xpath="./report/programID"/>
+            <xs:field xpath="."/>
+        </xs:key>
+        <xs:keyref name="report-to-student-to-program" refer="programInReport">
+            <xs:selector xpath="./student/programID"/>
+            <xs:field xpath="."/>
+        </xs:keyref>
+
+        <xs:key name="courseInReport">
+            <xs:selector xpath="./report/courses/courseID"/>
+            <xs:field xpath="."/>
+        </xs:key>
+        <xs:keyref name="report-to-program-to-course" refer="courseInReport">
+            <xs:selector xpath="./program/courses/courseID"/>
+            <xs:field xpath="."/>
+        </xs:keyref>
+
+        <xs:key name="taskInReport">
+            <xs:selector xpath="./report/courses/tasks/taskID"/>
+            <xs:field xpath="."/>
+        </xs:key>
+        <xs:keyref name="report-to-course-to-task" refer="taskInReport">
+            <xs:selector xpath="./course/tasks/taskID"/>
+            <xs:field xpath="."/>
+        </xs:keyref>
+    </xs:element>
+
+
+    <!--types-->
+    <xs:complexType name="reportType">
+        <xs:sequence>
+            <xs:element name="studentID" type="xs:int"/>
+            <xs:element name="programID" type="xs:int"/>
+            <xs:element name="courseID" type="xs:int" maxOccurs="unbounded"/>
+            <xs:element name="taskID" type="xs:int" maxOccurs="unbounded"/>
+            <xs:element name="mark" minOccurs="0">
+                <xs:simpleType>
+                    <xs:restriction base="xs:int">
+                        <xs:enumeration value="1"/>
+                        <xs:enumeration value="2"/>
+                        <xs:enumeration value="3"/>
+                        <xs:enumeration value="4"/>
+                        <xs:enumeration value="5"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="status">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:minLength value="1"/>
+                        <xs:maxLength value="70"/>
+                        <xs:enumeration value="изучение не началось"/>
+                        <xs:enumeration value="в процессе изучения"/>
+                        <xs:enumeration value="изучение завершено"/>
+                        <xs:enumeration value="выполнение не началось"/>
+                        <xs:enumeration value="в процессе выполнения"/>
+                        <xs:enumeration value="находится на проверке"/>
+                        <xs:enumeration value="задание принято"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="studentType">
+        <xs:sequence>
+            <xs:element name="id" type="xs:int"/>
+            <xs:element name="name">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:minLength value="1"/>
+                        <xs:maxLength value="70"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="city">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:minLength value="1"/>
+                        <xs:maxLength value="70"/>
+                        <xs:pattern value="[a-zA-Z]+"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="email">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:minLength value="1"/>
+                        <xs:maxLength value="70"/>
+                        <xs:pattern value=".+@[a-z]+\.[a-z]+"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="start_date" type="xs:date"/>
+            <xs:element name="has_contract" type="xs:boolean"/>
+            <xs:element name="programID" type="xs:int" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="programType">
+        <xs:sequence>
+            <xs:element name="id" type="xs:int"/>
+            <xs:element name="title">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:minLength value="1"/>
+                        <xs:maxLength value="70"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="author">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:minLength value="1"/>
+                        <xs:maxLength value="70"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="creation_date" type="xs:date"/>
+            <xs:element name="courseID" type="xs:int" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="courseType">
+        <xs:sequence>
+            <xs:element name="id" type="xs:int"/>
+            <xs:element name="title">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:minLength value="1"/>
+                        <xs:maxLength value="70"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="author">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:minLength value="1"/>
+                        <xs:maxLength value="70"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="creation_date" type="xs:date"/>
+            <xs:element name="taskID" type="xs:int" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="taskType">
+        <xs:sequence>
+            <xs:element name="id" type="xs:int"/>
+            <xs:element name="type">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:minLength value="1"/>
+                        <xs:maxLength value="70"/>
+                        <xs:enumeration value="Theoretical"/>
+                        <xs:enumeration value="Practical"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="title">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:minLength value="1"/>
+                        <xs:maxLength value="70"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="hours" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="studentTaskType">
+        <xs:sequence>
+            <xs:element name="mark" minOccurs="0">
+                <xs:simpleType>
+                    <xs:restriction base="xs:int">
+                        <xs:enumeration value="1"/>
+                        <xs:enumeration value="2"/>
+                        <xs:enumeration value="3"/>
+                        <xs:enumeration value="4"/>
+                        <xs:enumeration value="5"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="status">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:minLength value="1"/>
+                        <xs:maxLength value="70"/>
+                        <xs:enumeration value="изучение не началось"/>
+                        <xs:enumeration value="в процессе изучения"/>
+                        <xs:enumeration value="изучение завершено"/>
+                        <xs:enumeration value="выполнение не началось"/>
+                        <xs:enumeration value="в процессе выполнения"/>
+                        <xs:enumeration value="находится на проверке"/>
+                        <xs:enumeration value="задание принято"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

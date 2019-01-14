@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<curriculum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Report.xsd">
+
+    <reports>
+        <report>
+            <studentID>1</studentID>
+            <programID>1</programID>
+            <courseID>1</courseID>
+            <taskID>1</taskID>
+            <mark>5</mark>
+            <status>изучение завершено</status>
+        </report>
+        <report>
+            <studentID>1</studentID>
+            <programID>1</programID>
+            <courseID>2</courseID>
+            <taskID>2</taskID>
+            <mark>4</mark>
+            <status>изучение завершено</status>
+        </report>
+        <report>
+            <studentID>1</studentID>
+            <programID>1</programID>
+            <courseID>2</courseID>
+            <taskID>3</taskID>
+            <mark>3</mark>
+            <status>задание принято</status>
+        </report>
+        <report>
+            <studentID>1</studentID>
+            <programID>1</programID>
+            <courseID>3</courseID>
+            <taskID>4</taskID>
+            <mark>3</mark>
+            <status>изучение завершено</status>
+        </report>
+        <report>
+            <studentID>1</studentID>
+            <programID>1</programID>
+            <courseID>3</courseID>
+            <taskID>5</taskID>
+            <mark>3</mark>
+            <status>задание принято</status>
+        </report>
+        <report>
+            <studentID>1</studentID>
+            <programID>1</programID>
+            <courseID>4</courseID>
+            <taskID>6</taskID>
+            <mark>5</mark>
+            <status>изучение завершено</status>
+        </report>
+        <report>
+            <studentID>1</studentID>
+            <programID>1</programID>
+            <courseID>4</courseID>
+            <taskID>7</taskID>
+            <mark>5</mark>
+            <status>задание принято</status>
+        </report>
+        <report>
+            <studentID>1</studentID>
+            <programID>1</programID>
+            <courseID>5</courseID>
+            <taskID>8</taskID>
+            <mark>5</mark>
+            <status>изучение завершено</status>
+        </report>
+        <report>
+            <studentID>1</studentID>
+            <programID>1</programID>
+            <courseID>5</courseID>
+            <taskID>9</taskID>
+            <mark>5</mark>
+            <status>задание принято</status>
+        </report>
+        <report>
+            <studentID>1</studentID>
+            <programID>1</programID>
+            <courseID>6</courseID>
+            <taskID>10</taskID>
+            <mark>5</mark>
+            <status>изучение завершено</status>
+        </report>
+        <report>
+            <studentID>1</studentID>
+            <programID>1</programID>
+            <courseID>6</courseID>
+            <taskID>11</taskID>
+            <mark>5</mark>
+            <status>задание принято</status>
+        </report>
+        <report>
+            <studentID>1</studentID>
+            <programID>1</programID>
+            <courseID>7</courseID>
+            <taskID>12</taskID>
+            <mark>5</mark>
+            <status>изучение завершено</status>
+        </report>
+        <report>
+            <studentID>1</studentID>
+            <programID>1</programID>
+            <courseID>7</courseID>
+            <taskID>13</taskID>
+            <mark>5</mark>
+            <status>задание принято</status>
+        </report>
+        <report>
+            <studentID>1</studentID>
+            <programID>1</programID>
+            <courseID>7</courseID>
+            <taskID>14</taskID>
+            <mark>5</mark>
+            <status>изучение завершено</status>
+        </report>
+        <report>
+            <studentID>1</studentID>
+            <programID>1</programID>
+            <courseID>8</courseID>
+            <taskID>15</taskID>
+            <mark>5</mark>
+            <status>задание принято</status>
+        </report>
+
+
+        <report>
+            <studentID>2</studentID>
+            <programID>1</programID>
+            <courseID>1</courseID>
+            <taskID>1</taskID>
+            <mark>5</mark>
+            <status>изучение завершено</status>
+        </report>
+        <report>
+            <studentID>2</studentID>
+            <programID>1</programID>
+            <courseID>2</courseID>
+            <taskID>2</taskID>
+            <mark>4</mark>
+            <status>изучение завершено</status>
+        </report>
+        <report>
+            <studentID>2</studentID>
+            <programID>1</programID>
+            <courseID>2</courseID>
+            <taskID>3</taskID>
+            <mark>3</mark>
+            <status>задание принято</status>
+        </report>
+        <report>
+            <studentID>2</studentID>
+            <programID>1</programID>
+            <courseID>3</courseID>
+            <taskID>4</taskID>
+            <mark>3</mark>
+            <status>изучение завершено</status>
+        </report>
+        <report>
+            <studentID>2</studentID>
+            <programID>1</programID>
+            <courseID>3</courseID>
+            <taskID>5</taskID>
+            <mark>3</mark>
+            <status>задание принято</status>
+        </report>
+        <report>
+            <studentID>2</studentID>
+            <programID>1</programID>
+            <courseID>4</courseID>
+            <taskID>6</taskID>
+            <mark>5</mark>
+            <status>изучение завершено</status>
+        </report>
+        <report>
+            <studentID>2</studentID>
+            <programID>1</programID>
+            <courseID>4</courseID>
+            <taskID>7</taskID>
+            <mark>5</mark>
+            <status>задание принято</status>
+        </report>
+        <report>
+            <studentID>2</studentID>
+            <programID>1</programID>
+            <courseID>5</courseID>
+            <taskID>8</taskID>
+            <mark>5</mark>
+            <status>изучение завершено</status>
+        </report>
+        <report>
+            <studentID>2</studentID>
+            <programID>1</programID>
+            <courseID>5</courseID>
+            <taskID>9</taskID>
+            <mark>5</mark>
+            <status>задание принято</status>
+        </report>
+        <report>
+            <studentID>2</studentID>
+            <programID>1</programID>
+            <courseID>6</courseID>
+            <taskID>10</taskID>
+            <mark>5</mark>
+            <status>изучение завершено</status>
+        </report>
+        <report>
+            <studentID>2</studentID>
+            <programID>1</programID>
+            <courseID>6</courseID>
+            <taskID>11</taskID>
+            <mark>5</mark>
+            <status>задание принято</status>
+        </report>
+        <report>
+            <studentID>2</studentID>
+            <programID>1</programID>
+            <courseID>7</courseID>
+            <taskID>12</taskID>
+            <mark>5</mark>
+            <status>изучение завершено</status>
+        </report>
+        <report>
+            <studentID>2</studentID>
+            <programID>1</programID>
+            <courseID>7</courseID>
+            <taskID>13</taskID>
+            <mark>5</mark>
+            <status>задание принято</status>
+        </report>
+        <report>
+            <studentID>2</studentID>
+            <programID>1</programID>
+            <courseID>7</courseID>
+            <taskID>14</taskID>
+            <mark>5</mark>
+            <status>изучение завершено</status>
+        </report>
+        <report>
+            <studentID>2</studentID>
+            <programID>1</programID>
+            <courseID>8</courseID>
+            <taskID>15</taskID>
+            <mark>5</mark>
+            <status>задание принято</status>
+        </report>
+
+
+        <report>
+            <studentID>3</studentID>
+            <programID>2</programID>
+            <courseID>4</courseID>
+            <taskID>6</taskID>
+            <mark>5</mark>
+            <status>изучение завершено</status>
+        </report>
+        <report>
+            <studentID>3</studentID>
+            <programID>2</programID>
+            <courseID>4</courseID>
+            <taskID>7</taskID>
+            <mark>5</mark>
+            <status>задание принято</status>
+        </report>
+        <report>
+            <studentID>3</studentID>
+            <programID>2</programID>
+            <courseID>5</courseID>
+            <taskID>8</taskID>
+            <mark>5</mark>
+            <status>изучение завершено</status>
+        </report>
+        <report>
+            <studentID>3</studentID>
+            <programID>2</programID>
+            <courseID>5</courseID>
+            <taskID>9</taskID>
+            <mark>5</mark>
+            <status>задание принято</status>
+        </report>
+
+
+        <report>
+            <studentID>4</studentID>
+            <programID>3</programID>
+            <courseID>1</courseID>
+            <taskID>1</taskID>
+            <mark>5</mark>
+            <status>изучение завершено</status>
+        </report>
+        <report>
+            <studentID>4</studentID>
+            <programID>3</programID>
+            <courseID>2</courseID>
+            <taskID>2</taskID>
+            <mark>4</mark>
+            <status>изучение завершено</status>
+        </report>
+        <report>
+            <studentID>4</studentID>
+            <programID>3</programID>
+            <courseID>2</courseID>
+            <taskID>3</taskID>
+            <mark>3</mark>
+            <status>задание принято</status>
+        </report>
+        <report>
+            <studentID>4</studentID>
+            <programID>3</programID>
+            <courseID>3</courseID>
+            <taskID>4</taskID>
+            <mark>3</mark>
+            <status>изучение завершено</status>
+        </report>
+        <report>
+            <studentID>4</studentID>
+            <programID>3</programID>
+            <courseID>3</courseID>
+            <taskID>5</taskID>
+            <mark>3</mark>
+            <status>задание принято</status>
+        </report>
+        <report>
+            <studentID>4</studentID>
+            <programID>3</programID>
+            <courseID>7</courseID>
+            <taskID>12</taskID>
+            <mark>5</mark>
+            <status>изучение завершено</status>
+        </report>
+        <report>
+            <studentID>4</studentID>
+            <programID>3</programID>
+            <courseID>7</courseID>
+            <taskID>13</taskID>
+            <mark>5</mark>
+            <status>задание принято</status>
+        </report>
+        <report>
+            <studentID>4</studentID>
+            <programID>3</programID>
+            <courseID>7</courseID>
+            <taskID>14</taskID>
+            <mark>5</mark>
+            <status>изучение завершено</status>
+        </report>
+        <report>
+            <studentID>4</studentID>
+            <programID>3</programID>
+            <courseID>8</courseID>
+            <taskID>15</taskID>
+            <mark>5</mark>
+            <status>задание принято</status>
+        </report>
+
+    </reports>
+
+    <students>
+        <student>
+            <id>1</id>
+            <name>Alexander Sergeev</name>
+            <city>Moscow</city>
+            <email>Alexander_Sergeev@epam.com</email>
+            <start_date>2018-10-24</start_date>
+            <has_contract>false</has_contract>
+            <programID>1</programID>
+        </student>
+        <student>
+            <id>2</id>
+            <name>Boris Romanov</name>
+            <city>Satarov</city>
+            <email>Boris_Romanov@epam.com</email>
+            <start_date>2018-10-24</start_date>
+            <has_contract>false</has_contract>
+            <programID>1</programID>
+        </student>
+        <student>
+            <id>3</id>
+            <name>Vadim Petrov</name>
+            <city>Satarov</city>
+            <email>Vadim_Petrov@epam.com</email>
+            <start_date>2018-10-24</start_date>
+            <has_contract>false</has_contract>
+            <programID>2</programID>
+        </student>
+        <student>
+            <id>4</id>
+            <name>Ivan Fedorov</name>
+            <city>Moscow</city>
+            <email>Ivan_Fedorov@epam.com</email>
+            <start_date>2018-10-24</start_date>
+            <has_contract>false</has_contract>
+            <programID>3</programID>
+        </student>
+    </students>
+
+    <programs>
+        <program>
+            <id>1</id>
+            <title>Full program</title>
+            <author>Aleksandra Ivanova</author>
+            <creation_date>2015-01-20</creation_date>
+            <courseID>1</courseID>
+            <courseID>2</courseID>
+            <courseID>3</courseID>
+            <courseID>4</courseID>
+            <courseID>5</courseID>
+            <courseID>6</courseID>
+            <courseID>7</courseID>
+            <courseID>8</courseID>
+        </program>
+        <program>
+            <id>2</id>
+            <title>Специальная программа 1</title>
+            <author>Maria Sidorova</author>
+            <creation_date>2015-01-20</creation_date>
+            <courseID>4</courseID>
+            <courseID>5</courseID>
+        </program>
+        <program>
+            <id>3</id>
+            <title>Укороченная программа</title>
+            <author>Maria Sidorova</author>
+            <creation_date>2015-01-20</creation_date>
+            <courseID>1</courseID>
+            <courseID>2</courseID>
+            <courseID>3</courseID>
+            <courseID>7</courseID>
+            <courseID>8</courseID>
+        </program>
+    </programs>
+
+    <courses>
+        <course>
+            <id>1</id>
+            <title>Overview of Eclipse IDE</title>
+            <author>Aleksandra Ivanova</author>
+            <creation_date>2015-01-20</creation_date>
+            <taskID>1</taskID>
+        </course>
+        <course>
+            <id>2</id>
+            <title>Основы языка Java</title>
+            <author>Aleksandra Ivanova</author>
+            <creation_date>2015-01-20</creation_date>
+            <taskID>2</taskID>
+            <taskID>3</taskID>
+        </course>
+        <course>
+            <id>3</id>
+            <title>Язык Java - расширенные возможности</title>
+            <author>Aleksandra Ivanova</author>
+            <creation_date>2015-01-20</creation_date>
+            <taskID>4</taskID>
+            <taskID>5</taskID>
+        </course>
+        <course>
+            <id>4</id>
+            <title>Язык XML</title>
+            <author>Aleksandra Ivanova</author>
+            <creation_date>2015-01-20</creation_date>
+            <taskID>6</taskID>
+            <taskID>7</taskID>
+        </course>
+        <course>
+            <id>5</id>
+            <title>Язык XSLT и XPath</title>
+            <author>Aleksandra Ivanova</author>
+            <creation_date>2015-01-20</creation_date>
+            <taskID>8</taskID>
+            <taskID>9</taskID>
+        </course>
+        <course>
+            <id>6</id>
+            <title>Технология Struts Framework</title>
+            <author>Aleksandra Ivanova</author>
+            <creation_date>2015-01-20</creation_date>
+            <taskID>10</taskID>
+            <taskID>11</taskID>
+        </course>
+        <course>
+            <id>7</id>
+            <title>Процесс производства программного обеспечения</title>
+            <author>Aleksandra Ivanova</author>
+            <creation_date>2015-01-20</creation_date>
+            <taskID>12</taskID>
+            <taskID>13</taskID>
+            <taskID>14</taskID>
+        </course>
+        <course>
+            <id>8</id>
+            <title>Процесс разработки программного обеспечения</title>
+            <author>Aleksandra Ivanova</author>
+            <creation_date>2015-01-20</creation_date>
+            <taskID>15</taskID>
+        </course>
+    </courses>
+
+    <tasks>
+        <task>
+            <id>1</id>
+            <type>Theoretical</type>
+            <title>Overview of Eclipse IDE</title>
+            <hours>4</hours>
+        </task>
+        <task>
+            <id>2</id>
+            <type>Theoretical</type>
+            <title>Learning the Java Language Basics</title>
+            <hours>12</hours>
+        </task>
+        <task>
+            <id>3</id>
+            <type>Practical</type>
+            <title>Practical Task</title>
+            <hours>4</hours>
+        </task>
+        <task>
+            <id>4</id>
+            <type>Theoretical</type>
+            <title>Learning the Java Language advanced features</title>
+            <hours>17</hours>
+        </task>
+        <task>
+            <id>5</id>
+            <type>Practical</type>
+            <title>Practical Task</title>
+            <hours>16</hours>
+        </task>
+        <task>
+            <id>6</id>
+            <type>Theoretical</type>
+            <title>Learning XML Language</title>
+            <hours>6</hours>
+        </task>
+        <task>
+            <id>7</id>
+            <type>Practical</type>
+            <title>Practical Task</title>
+            <hours>8</hours>
+        </task>
+        <task>
+            <id>8</id>
+            <type>Theoretical</type>
+            <title>Learning XSLT and XPath Basics</title>
+            <hours>14</hours>
+        </task>
+        <task>
+            <id>9</id>
+            <type>Practical</type>
+            <title>Equipment Stylesheets</title>
+            <hours>8</hours>
+        </task>
+        <task>
+            <id>10</id>
+            <type>Theoretical</type>
+            <title>Struts Framework Fundamentals</title>
+            <hours>8</hours>
+        </task>
+        <task>
+            <id>11</id>
+            <type>Practical</type>
+            <title>Struts Framework Task</title>
+            <hours>40</hours>
+        </task>
+        <task>
+            <id>12</id>
+            <type>Theoretical</type>
+            <title>Mastering Microsoft Project</title>
+            <hours>3</hours>
+        </task>
+        <task>
+            <id>13</id>
+            <type>Practical</type>
+            <title>MS Project Practical Task</title>
+            <hours>8</hours>
+        </task>
+        <task>
+            <id>14</id>
+            <type>Theoretical</type>
+            <title>Software development process. Development team and its structure</title>
+            <hours>12</hours>
+        </task>
+        <task>
+            <id>15</id>
+            <type>Practical</type>
+            <title>Team Project</title>
+            <hours>80</hours>
+        </task>
+    </tasks>
+</curriculum>
